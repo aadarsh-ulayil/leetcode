@@ -1,13 +1,9 @@
 class Solution(object):
     def runningSum(self, nums):
-        previous_sum = 0
-        mylist = []
+        for i in range(1, len(nums)):
+            nums[i] += nums[i - 1]
 
-        for i in nums:
-            previous_sum += i
-            mylist.append(previous_sum)
-
-        return mylist
+        return nums
         
             
         
